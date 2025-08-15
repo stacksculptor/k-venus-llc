@@ -1,15 +1,42 @@
 {
   "name": "k-venus-llc-website",
   "version": "1.0.0",
-  "description": "Professional business website for K VENUS LLC",
-  "main": "index.html",
+  "description": "Professional business website for K VENUS LLC - React Version",
+  "private": true,
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-scripts": "5.0.1",
+    "react-router-dom": "^6.8.0",
+    "framer-motion": "^10.12.0"
+  },
   "scripts": {
-    "start": "python3 -m http.server 8000",
-    "dev": "python3 -m http.server 8000",
-    "build": "echo 'Static site - no build required'",
-    "deploy": "vercel --prod"
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "deploy": "npm run build && vercel --prod"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
   },
   "keywords": [
+    "react",
     "business",
     "website",
     "llc",
@@ -20,20 +47,9 @@
   ],
   "author": "Brandon Johnson - K VENUS LLC",
   "license": "UNLICENSED",
-  "private": true,
   "repository": {
     "type": "git",
     "url": "https://github.com/yourusername/k-venus-llc.git"
   },
-  "homepage": "https://k-venus-llc.vercel.app",
-  "engines": {
-    "node": ">=14.0.0"
-  },
-  "devDependencies": {},
-  "dependencies": {},
-  "browserslist": [
-    "> 1%",
-    "last 2 versions",
-    "not dead"
-  ]
+  "homepage": "https://k-venus-llc.vercel.app"
 } 

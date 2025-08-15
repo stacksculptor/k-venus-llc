@@ -3,14 +3,29 @@
   "name": "k-venus-llc",
   "builds": [
     {
-      "src": "*.html",
-      "use": "@vercel/static"
+      "src": "package.json",
+      "use": "@vercel/static-build",
+      "config": {
+        "distDir": "build"
+      }
     }
   ],
   "routes": [
     {
+      "src": "/static/(.*)",
+      "dest": "/static/$1"
+    },
+    {
+      "src": "/favicon.ico",
+      "dest": "/favicon.ico"
+    },
+    {
+      "src": "/manifest.json",
+      "dest": "/manifest.json"
+    },
+    {
       "src": "/(.*)",
-      "dest": "/$1"
+      "dest": "/index.html"
     }
   ],
   "headers": [
@@ -36,16 +51,7 @@
       ]
     },
     {
-      "source": "/(.*\\.css)",
-      "headers": [
-        {
-          "key": "Cache-Control",
-          "value": "public, max-age=31536000, immutable"
-        }
-      ]
-    },
-    {
-      "source": "/(.*\\.js)",
+      "source": "/static/(.*)",
       "headers": [
         {
           "key": "Cache-Control",
