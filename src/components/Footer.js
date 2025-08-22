@@ -33,7 +33,6 @@ const Footer = () => {
           </div>
           <div className="footer-section">
             <h4>Business Info</h4>
-            <p><strong>EIN:</strong> 39-2819775</p>
             <p><strong>Established:</strong> 2025</p>
             <p><strong>Location:</strong> Fort Walton Beach, FL</p>
           </div>
