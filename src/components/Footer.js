@@ -38,7 +38,7 @@ const Footer = () => {
           </div>
         </div>
         <div className="footer-bottom">
-          <p>&copy; 2025 K VENUS LLC. All rights reserved. | EIN: 39-2819775</p>
+          <p>&copy; 2025 K VENUS LLC. All rights reserved.</p>
         </div>
       </div>
     </footer>
